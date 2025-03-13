@@ -1,5 +1,14 @@
 import "../styles/notes.css";
-function Notes({ title, book, author, part, page, quote, removeQuote }) {
+function Notes({
+  title,
+  book,
+  author,
+  part,
+  page,
+  quote,
+  removeQuote,
+  editQuote,
+}) {
   return (
     <>
       <div className="note">
@@ -19,7 +28,14 @@ function Notes({ title, book, author, part, page, quote, removeQuote }) {
           >
             حذف
           </button>
-          <button className="edit">تعديل</button>
+          <button
+            className="edit"
+            onClick={() => {
+              editQuote();
+            }}
+          >
+            تعديل
+          </button>
         </div>
       </div>
     </>

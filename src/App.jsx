@@ -25,6 +25,9 @@ function App() {
         removeQuote={() => {
           removeQuote(i);
         }}
+        editQuote={() => {
+          editQuote(i, quote.quote);
+        }}
       />
     );
   });
@@ -37,6 +40,13 @@ function App() {
   function removeQuote(index) {
     const newQuotes = quotes.filter((_, i) => i !== index);
     setQuotes(newQuotes);
+  }
+  // here
+  function editQuote(i, quote) {
+    let editedQuote = prompt("الفــائــدة", quote);
+
+    console.log(editedQuote);
+    setQuotes([...quotes, (quotes[i].quote = editedQuote)]);
   }
   return (
     <>
