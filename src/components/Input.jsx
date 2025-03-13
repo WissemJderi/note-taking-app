@@ -20,6 +20,7 @@ function Input({ addQuote }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(formData);
     addQuote(formData);
     setFormData({
       title: "",

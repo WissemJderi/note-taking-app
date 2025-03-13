@@ -6,9 +6,10 @@ import islamicQuotes from "./data/data";
 import Button from "./components/Button";
 import Input from "./components/Input";
 function App() {
+  const [quotes, setQuotes] = useState(islamicQuotes);
   const [numberOfQuotes] = useState(islamicQuotes.length);
   const [forumIsShown, setForumIsShown] = useState(false);
-  let quotes = islamicQuotes.map((quote, i) => {
+  let quotesList = quotes.map((quote, i) => {
     return (
       <Notes
         key={quote.page + i}
@@ -24,16 +25,19 @@ function App() {
   function showForum() {
     setForumIsShown(!forumIsShown);
   }
+  function addQuote(data) {
+    setQuotes([...quotes, data]);
+  }
   return (
     <>
       <Header />
       <div className="main-header">
         <h1 className="n-of-qs">عــدد الفــوائــد : {numberOfQuotes}</h1>
         <Button showForum={showForum} />
-        {forumIsShown ? <Input /> : null}
+        {forumIsShown ? <Input addQuote={addQuote} /> : null}
       </div>
       <hr />
-      <div className="notes-container">{quotes}</div>
+      <div className="notes-container">{quotesList}</div>
     </>
   );
 }
