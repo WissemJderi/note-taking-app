@@ -1,0 +1,27 @@
+* {
+  direction: rtl;
+}
+h1 {
+  text-align: center;
+}
+
+.notes-container {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  max-width: 70%;
+  margin: 50px auto;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.note {
+  margin: 20px;
+  padding: 20px;
+  background-color: #eeddd3;
+
+  border-radius: 15px;
+  flex-basis: calc(33.333% - 40px); /* Adjusting for margin */
+  max-width: calc(33.333% - 40px); /* Adjusting for margin */
+  box-sizing: border-box;
+}

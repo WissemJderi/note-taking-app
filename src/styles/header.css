@@ -9,10 +9,12 @@ nav {
   align-items: center;
   justify-content: space-between;
 }
+nav > h1 {
+  font-size: 2rem;
+}
 section {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  gap: 50px;
 }
 section > h1 {
   cursor: pointer;
