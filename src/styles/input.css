@@ -1,0 +1,41 @@
+form {
+  margin: 10px;
+  border: 2px solid black;
+  border-radius: 15px;
+  width: 300px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the right */
+  opacity: 0; /* Start with the form hidden */
+  animation: fadeIn 1s forwards; /* Apply the fade-in animation */
+}
+
+form > div {
+  margin: 10px;
+  width: 100%; /* Ensure divs take full width */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align content to the right */
+}
+
+label {
+  color: #2d3142;
+  font-weight: 600;
+  margin-left: 10px; /* Add some space between label and input */
+  width: 90px;
+}
+
+input,
+textarea {
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  align-self: flex-end; /* Align inputs to the right */
+  text-align: right; /* Ensure text inside inputs is aligned to the right */
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1; /* End with the form fully visible */
+  }
+}

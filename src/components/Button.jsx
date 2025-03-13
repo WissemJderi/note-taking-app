@@ -1,9 +1,16 @@
+
 import "../styles/buttons.css";
 
-function Button() {
+function Button(props) {
   return (
     <>
-      <button>أضــف فــائــدة</button>
+      <button
+        onClick={() => {
+          props.showForum();
+        }}
+      >
+        أضــف فــائــدة
+      </button>
     </>
   );
 }

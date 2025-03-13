@@ -9,7 +9,6 @@ h1 {
   margin: 20px;
   padding: 20px;
   background-color: #eeddd3;
-
   border-radius: 15px;
   flex-basis: calc(33.333% - 40px); /* Adjusting for margin */
   max-width: calc(33.333% - 40px); /* Adjusting for margin */
