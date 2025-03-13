@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import "../styles/input.css";
 function Input({ addQuote }) {
   const [formData, setFormData] = useState({
-    title: "",
-    book: "",
-    author: "",
-    part: "",
-    page: "",
-    quote: "",
+    title: "الصدق",
+    book: "سنن ابن ماجه",
+    author: "الإمام ابن ماجه",
+    part: 1,
+    page: 69,
+    quote: "عليكم بالصدق فإن الصدق يهدي إلى البر",
   });
 
   const handleChange = (e) => {
@@ -39,6 +39,7 @@ function Input({ addQuote }) {
         <input
           type="text"
           name="title"
+          required
           value={formData.title}
           onChange={handleChange}
         />
@@ -48,6 +49,7 @@ function Input({ addQuote }) {
         <input
           type="text"
           name="book"
+          required
           value={formData.book}
           onChange={handleChange}
         />
@@ -75,13 +77,19 @@ function Input({ addQuote }) {
         <input
           type="number"
           name="page"
+          required
           value={formData.page}
           onChange={handleChange}
         />
       </div>
       <div>
         <label>الاقتباس:</label>
-        <textarea name="quote" value={formData.quote} onChange={handleChange} />
+        <textarea
+          name="quote"
+          value={formData.quote}
+          onChange={handleChange}
+          required
+        />
       </div>
       <button type="submit">أضف اقتباس</button>
     </form>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Notes from "./components/Notes";
@@ -7,8 +7,11 @@ import Button from "./components/Button";
 import Input from "./components/Input";
 function App() {
   const [quotes, setQuotes] = useState(islamicQuotes);
-  const [numberOfQuotes] = useState(islamicQuotes.length);
+  const [numberOfQuotes, setNumberOfQuotes] = useState(quotes.length);
   const [forumIsShown, setForumIsShown] = useState(false);
+  useEffect(() => {
+    setNumberOfQuotes(quotes.length);
+  }, [quotes]);
   let quotesList = quotes.map((quote, i) => {
     return (
       <Notes
@@ -19,6 +22,9 @@ function App() {
         part={quote.part}
         page={quote.page}
         quote={quote.quote}
+        removeQuote={() => {
+          removeQuote(i);
+        }}
       />
     );
   });
@@ -27,6 +33,10 @@ function App() {
   }
   function addQuote(data) {
     setQuotes([...quotes, data]);
+  }
+  function removeQuote(index) {
+    const newQuotes = quotes.filter((_, i) => i !== index);
+    setQuotes(newQuotes);
   }
   return (
     <>
