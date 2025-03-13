@@ -1,0 +1,19 @@
+.header {
+  padding: 0px 30px;
+  border-bottom: 2px solid black;
+  background-color: #eeddd3;
+}
+nav {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+section > h1 {
+  cursor: pointer;
+}
