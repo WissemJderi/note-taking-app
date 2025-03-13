@@ -5,16 +5,6 @@ h1 {
   text-align: center;
 }
 
-.notes-container {
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
-  max-width: 70%;
-  margin: 50px auto;
-  flex-wrap: wrap;
-  align-items: stretch;
-}
-
 .note {
   margin: 20px;
   padding: 20px;

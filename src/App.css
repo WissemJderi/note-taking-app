@@ -2,6 +2,9 @@ body {
   margin: 0;
   background-color: #f0efeb;
 }
+hr {
+  width: 80%;
+}
 .n-of-qs {
   direction: rtl;
   text-align: right;
@@ -12,7 +15,13 @@ body {
   align-items: baseline;
   justify-content: center;
   max-width: 70%;
-  margin: 50px auto;
+  margin: 10px auto;
   flex-wrap: wrap;
   align-items: stretch;
+}
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
