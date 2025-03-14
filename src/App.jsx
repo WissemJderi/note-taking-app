@@ -41,12 +41,17 @@ function App() {
     const newQuotes = quotes.filter((_, i) => i !== index);
     setQuotes(newQuotes);
   }
-  // here
+
   function editQuote(i, quote) {
     let editedQuote = prompt("الفــائــدة", quote);
 
     console.log(editedQuote);
-    setQuotes([...quotes, (quotes[i].quote = editedQuote)]);
+    console.log(quotes[i].quote);
+    setQuotes((prevArr) => {
+      const newQuotes = [...prevArr];
+      newQuotes[i].quote = editedQuote;
+      return newQuotes;
+    });
   }
   return (
     <>

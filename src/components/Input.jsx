@@ -91,7 +91,7 @@ function Input({ addQuote }) {
           required
         />
       </div>
-      <button type="submit">أضف اقتباس</button>
+      <button type="submit">أضف الاقتباس </button>
     </form>
   );
 }
