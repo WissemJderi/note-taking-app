@@ -19,3 +19,10 @@ section {
 section > h1 {
   cursor: pointer;
 }
+.nav {
+  text-decoration: none;
+  color: black;
+}
+.logo {
+  font-size: 2rem;
+}

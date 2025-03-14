@@ -55,7 +55,6 @@ function App() {
   }
   return (
     <>
-      <Header />
       <div className="main-header">
         <h1 className="n-of-qs">عــدد الفــوائــد : {numberOfQuotes}</h1>
         <Button showForum={showForum} />
